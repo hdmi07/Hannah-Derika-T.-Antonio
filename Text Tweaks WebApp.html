@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Tweaks</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body and Container Styling */
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #1a2b3c; /* Dark Blue background */
+      color: #fff;
+    }
+
+    /* Container for the whole webpage */
+    .container {
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    /* Header and Banner */
+    .header {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .banner-img {
+      width: 100%;
+      height: auto;
+    }
+
+    /* Boxes layout */
+    .boxes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      width: 80%;
+      max-width: 1200px;
+    }
+
+    .box {
+      background-color: #3a5f8f; /* Medium Blue for the boxes */
+      padding: 30px;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: white; /* White text */
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+      background-color: #4b7b9b; /* Slightly lighter blue on hover */
+    }
+
+    .box:active {
+      transform: scale(0.98);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .boxes {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .boxes {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .footer {
+	font-family: Jokerman;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="banner">
+        <img src="banner.jpg" alt="Banner" class="banner-img">
+      </div>
+    </header>
+
+    <div class="boxes">
+      <div class="box" onclick="playVideo()">
+        Elicit
+      </div>
+     <div class="box" onclick="window.location.href='Understanding Word Application.html';"> Engage
+      </div>
+      <div class="box" onclick="window.location.href='FT.html';">
+        Explore
+      </div>
+      <div class="box" onclick="window.location.href='FIND ME!.html';">
+        Explain
+      </div>
+      <div class="box" onclick="window.location.href='game 4.html';">
+        Elaborate
+      </div>
+      <div class="box" onclick="window.location.href='https://link6.com';">
+        Evaluate
+      </div>
+    </div>
+	<br>
+	<footer> <p>&copy; 2024 Text Tweaks</p> </footer>
+
+    <!-- Video Element -->
+    <video id="myVideo" style="display:none;" controls>
+     <source src="Advantages of Formatting Text.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <script>
+    function playVideo() {
+      const video = document.getElementById('myVideo');
+      video.style.display = 'block'; // Makes the video visible
+      video.play();
+    }
+  </script>
+  
+  
+</body>
+</html>
